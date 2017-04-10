@@ -202,8 +202,7 @@ namespace Sudoku
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string funkca;
-            string file_name = @"C:\Users\" + funkca + "\Desktop\sudoku2.txt";
+            string file_name = @"C:\Users\user\Desktop\sudoku2.txt";
             StreamWriter objWriter;
             objWriter = new StreamWriter(file_name, true);
             int n = 1;
