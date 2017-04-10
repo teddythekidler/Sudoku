@@ -19,9 +19,10 @@ namespace Sudoku
                 }
                 i++;
             }
-            
+
             return lines;
         }
+
         public static bool Sprawdz(int[,] tab)
         {
             for (int i = 0; i < 9; i++)
@@ -31,26 +32,8 @@ namespace Sudoku
                 if ((tab[0, i] + tab[1, i] + tab[2, i] + tab[3, i] + tab[4, i] + tab[5, i] + tab[6, i] +
                     tab[7, i] + tab[8, i]) != 45) return false;
             }
-
             return true;
         }
-        
-        public static int[,] Zapisz()
-        {
-            int[,] lines = new int[9, 9];
-            string input = File.ReadAllText(@"C:\Users\user\Desktop\sudoku.txt");
-            int i = 0, j = 0;
-            foreach (var row in input.Split('\n'))
-            {
-                j = 0;
-                foreach (var col in row.Trim().Split(' '))
-                {
-                    lines[i, j] = int.Parse(col.Trim());
-                    j++;
-                }
-                i++;
-            }
-            return lines;
-        }
+
     }
 }
